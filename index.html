@@ -1,58 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We'll Be Back Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-       
-        <link rel="stylesheet" href="assets/css/styles.css">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
 
-        <title>SBF</title>
-    </head>
-    <body>
-        <header class="header">
-            <a href="#" class="header__logo">SBF</a>
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-            <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+        h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
 
-            <nav class="nav" id="nav-menu">
-                <div class="nav__content bd-grid">
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #6c757d;
+        }
 
-                    <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
-    
-                    <div class="nav__perfil">
-                        <div class="nav__img">
-                            <img src="assets/img/perfil.png" alt="">
-                        </div>
-                        
-                        <div>
-                            <a href="#" class="nav__name">Jhon Doe</a>
-                            <span class="nav__profesion">Web designer</span>
-                        </div>
-                    </div>
-    
-                    <div class="nav__menu">
-                        <ul class="nav__list">
-                            <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                        </ul>
-                    </div>
-    
-                    <div class="nav__social">
-                        <a href="#" class="nav__social-icon"><ion-icon name="logo-linkedin"></ion-icon></a>
-                        <a href="#" class="nav__social-icon"><ion-icon name="logo-github"></ion-icon></a>
-                        <a href="#" class="nav__social-icon"><ion-icon name="logo-behance"></ion-icon></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-        <!-- ===== IONICONS ===== -->
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+        .btn:hover {
+            background-color: #0056b3;
+        }
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>We'll Be Back Soon!</h1>
+        <p>Our website is currently undergoing scheduled maintenance. We apologize for any inconvenience and appreciate your patience. Please check back with us shortly.</p>
+        <a href="#" class="btn">Contact Us</a>
+        <footer>&copy; 2025 Your eCommerce Brand. All rights reserved.</footer>
+    </div>
+</body>
 </html>
