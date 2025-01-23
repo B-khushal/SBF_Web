@@ -3,78 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Are Opening Soon</title>
+    <title>Spring Blossoms - Coming Soon</title>
     <style>
-        * {
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #444;
+            text-align: center;
+            overflow: hidden;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f8f9fa;
-            color: #343a40;
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
-            text-align: center;
-            max-width: 600px;
-            padding: 30px;
-            background-color: #ffffff;
-            border: 1px solid #dee2e6;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #28a745;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            color: #ff6a00;
+            margin: 0;
         }
 
         p {
             font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            color: #6c757d;
+            margin: 10px 0;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
+        .highlight {
+            color: #4b4aaf;
+        }
+
+        .contact {
+            margin-top: 20px;
             font-size: 1rem;
-            font-weight: 600;
-            color: #fff;
-            background-color: #28a745;
-            border: none;
-            border-radius: 4px;
+        }
+
+        a {
+            color: #d2691e;
             text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
-        .btn:hover {
-            background-color: #218838;
+        a:hover {
+            text-decoration: underline;
         }
 
-        footer {
-            margin-top: 2rem;
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #444;
+        }
+
+        .social-links a:hover {
+            color: #ff4500;
+        }
+
+        footer {    
+            margin-top: 40px;
             font-size: 0.9rem;
-            color: #6c757d;
+            color: #666;
+        }
+
+        .cursor-effect {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(143, 207, 70);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            animation: trail 0.5s ease-out forwards;
+        }
+
+        @keyframes trail {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: scale(3);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>We Are Opening Soon!</h1>
-        <p>We are thrilled to announce that our brand-new store will be opening soon! Stay tuned for exciting updates and get ready to shop with us.</p>
-        <a href="sbf.html" class="btn">Notify Me</a>
-        <footer>&copy; 2025 Spring Blossoms Florist. All rights reserved.</footer>
+        <h1>Spring Blossoms</h1>
+        <p class="highlight"><b>Our website is blooming soon!</b></p>
+        <p>We're working hard to bring you an amazing shopping experience. Stay tuned!</p>
+
+        <div class="contact">
+            <p>Contact us at: <a href="mailto:info@springblossoms.com">info@springblossoms.com</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="#" title="Visit our Facebook"><i class="fab fa-facebook"><ion-icon name="logo-facebook"></ion-icon></i></a>
+            <a href="#" title="Follow us on Instagram"><i class="fab fa-instagram"><ion-icon name="logo-instagram"></ion-icon></i></a>
+            <a href="#" title="Follow us on Twitter"><i class="fab fa-twitter"><ion-icon name="logo-twitter"></ion-icon></i></a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Yellow Pulse. All Rights Reserved.</p>
+        </footer>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener('mousemove', (event) => {
+            const cursorEffect = document.createElement('div');
+            cursorEffect.classList.add('cursor-effect');
+            cursorEffect.style.left = `${event.pageX}px`;
+            cursorEffect.style.top = `${event.pageY}px`;
+            document.body.appendChild(cursorEffect);
+
+            setTimeout(() => {
+                cursorEffect.remove();
+            }, 500);
+        });
+    </script>
 </body>
 </html>
