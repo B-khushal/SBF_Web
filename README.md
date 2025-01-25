@@ -80,3 +80,5 @@ For any inquiries or feedback, please contact us at:
 ---
 
 Thank you for visiting our repository! We hope you enjoy using our Spring Blossoms Florist e-commerce website.
+
+If any issues occur feel free to mail us.
