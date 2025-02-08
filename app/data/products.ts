@@ -33,7 +33,7 @@ export const products: Product[] = [
     name: "Orchid Plant",
     description: "Elegant orchid plant in a decorative pot",
     price: 39.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "./sbf/1.jpeg?height=300&width=300",
   },
 ]
 
